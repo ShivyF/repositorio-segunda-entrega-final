@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+#ohlinda {
+    background-color: rgb(210, 240, 162);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 225px auto 125px;
+}
+
+.header {
+    background-image: url(../img/burning-candles.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-areas:
+    ". search search search cart"
+    ". . logo . ."
+    ". menu menu menu .";
+}
+
+#btn-menu {
+    display: none;
+}
+
+.header label {
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+    color: #FFF;
+} 
+
+.header .header__search {
+    grid-area: search;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.header .header__search form > input {
+    width: 50%;
+    height: 25px;
+    border-radius: 15px;
+    border: 1px solid rgb(201, 201, 201);
+    margin: 7px 0 0 0;
+}
+
+.header .header__search form > input:focus {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0 / 19%);
+    outline: 0;
+}
+
+.header .header__cart {
+    grid-area: cart;
+    color: white;
+    display: flex;
+    justify-content:right;
+    margin-left: -48px;
+}
+
+.material-symbols-outlined {
+    margin: 7px;
+    padding: 5px;
+}
+
+.header .header__logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+.header .header__logo img {
+    border-radius: 50%;
+}
+
+.header .header__menu {
+    grid-area: menu;
+    height: 75px;
+}
+
+.header .header__menu ul {
+    display: flex;
+    background-color: rgb(240, 200, 145);
+    border-radius: 20px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header .header__menu ul li {
+    padding: 10px;
+    background-color: rgb(240, 200, 145);
+}
+
+.header .header__menu ul li a:hover {
+    padding: 10px 5px;
+    margin: -5px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 7px;
+}
+
+.cuerpo {
+    background-color: rgb(240, 200, 145);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.cuerpo .cuerpo__noticias {
+    display: flexbox;
+    margin-top: 25px;
+    background-color: rgb(210, 240, 165);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.cuerpo .cuerpo__noticias .cuerpo__noticias__main {
+    margin-bottom: 5px;
+}
+
+.cuerpo .cuerpo__noticias__titular {
+    display: flex;
+    justify-content: center;
+    color: rgb(218, 133, 36);
+}
+
+.cuerpo .cuerpo__noticias__texto {
+    display: flex;
+    justify-content: right;
+}
+
+.cuerpo .cuerpo__productos {
+    margin-top: 25px;
+}
+
+.cuerpo .cuerpo__productos__titulo {
+    display: flex;
+    justify-content: center;
+    color: rgb(40, 55, 10)
+}
+
+.cuerpo .cuerpo__productos__texto {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.cuerpo__trabaja {
+    margin-top: 25px;
+    margin-left: 75px;
+    margin-right: 75px;
+    color: rgb(40, 55, 10);
+}
+
+.cuerpo__trabaja__titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpo .cuerpo__trabaja h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cuerpo__trabaja__textarea {
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpo__trabaja__mail {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-top: -7px;
+}
+
+.cuerpo__trabaja__telefono {
+    display: flex;
+    justify-content: center;    
+    padding-bottom: 10px;
+}
+
+.cuerpo__trabaja__submit {
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpo__ubicacion {
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 25px;
+    color: rgb(40, 55, 10);
+}
+
+.cuerpo__ubicacion h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.cuerpo__ubicacion h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.cuerpo__ubicacion__map {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background-image: url(../img/burning-candles.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 225px;
+    grid-template-rows: 1fr;
+}
+
+.footer .footer__faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 10px;
+    color: rgb(36, 54, 9);
+    grid-column: 1;
+    grid-row: 1;
+    transform: translateX(100px);
+}
+
+.footer .footer__faq h5 {
+    margin: 5px;
+}
+
+.footer .footer__faq h6 {
+    margin: 7px;
+}
+
+.footer .footer__redes {
+    display: flex;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
+    margin-right: 50px;
+}
+
+.footer .footer__redes svg {
+    margin: 7px;
+}
+
+@media (max-width: 600px) {
+    #ohlinda {
+        background-color: rgb(240, 200, 145);
+    }
+    .header label {
+        display: block;
+    }
+
+    .header .header__search {
+        margin-left: -48px;
+    }
+
+    .header .header__logo {
+        margin-left: -48px;
+    }
+
+    .header__menu {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+
+    .header__menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .header__menu {
+        transform: translateX(0%);
+    }
+
+    .footer .footer__redes {
+        transform: scale(0.75);
+        margin-right: 0%;
+    }
+}
